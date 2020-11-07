@@ -5,7 +5,7 @@ const ejs = require('ejs');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
@@ -114,8 +114,8 @@ app.route('/articles/:articleTitle')
 	);
 });	
 
-app.listen(PORT, function(){
-	console.log(`Server started on port: ${PORT}`);
+app.listen(port, function(){
+	console.log(`Server started on port: ${port}`);
 });
 
 
