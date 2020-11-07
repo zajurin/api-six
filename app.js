@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+
 
 
 const app = express();
@@ -17,7 +19,7 @@ app.use(express.static('public'));
 
 // MONGOOSE
 
-const URI = 'mongodb://localhost:27017/wikiDb';
+const URI = process.env.MONGODB_URI;
 
 mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
